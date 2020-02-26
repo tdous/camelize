@@ -17,5 +17,9 @@ test('strips non-A-Z characters', () => {
 });
 
 test('ignores acronyms/initialisms', () => {
-  expect(camelize('29Perfor\m\-th&IS_TASK ple93.3ase!')).toBe('performThisTaskPlease');
+  expect(camelize('29Perfor\m\-th&IS_TASK ple93.3ase!')).toBe('performThisTASKPlease');
+});
+
+test('sanity check', () => {
+  expect(camelize('""pE?r\'f:or@m~#\\\';}{|__tHIs`¬+)(*&)!"^)!^)!2 task8/?.,><#--plE&£$Ase---')).toBe('performThisTaskPlease');
 });
