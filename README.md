@@ -1,7 +1,7 @@
 # camelize
 String transformation to camelCase.
 
-- Allowed 'word' separators are *space*, *hyphen*, and *underscore*.
+- Allowed 'word' separators are *space*, *hyphen*, *dot*, and *underscore*.
 - Strips anything else that isn't a-z/A-Z.
 - Ignores acronyms/initialisms.
 
@@ -28,15 +28,15 @@ output = camelize('perform this task');
 output = camelize('Perform thIS taSk');
 // output === 'performThisTask'
 
-output = camelize('Perform-thIS_taSk please');
-// output === 'performThisTaskPlease'
+output = camelize('dO.Perform-thIS_taSk please');
+// output === 'doPerformThisTaskPlease'
 
-output = camelize('29Perfor\m\-th&IS_taSk ple93.3ase!');
-// output === 'performThisTaskPlease'
+output = camelize('dO.29Perfor\m\-th&IS_taSk ple93;3ase!');
+// output === 'doPerformThisTaskPlease'
 
-output = camelize('29Perfor\m\-th&IS_TASK ple93.3ase!');
-// output === 'performThisTASKPlease'
+output = camelize('dO.P29Perfor\m\-th&IS_TASK ple93;3ase!');
+// output === 'doPerformThisTASKPlease'
 
-output = camelize('""pE?r\'f:or@m~#\\\';}{|__tHIs`¬+)(*&)!"^)!^)!2 task8/?.,><#--plE&£$Ase---');
-// output === 'performThisTaskPlease'
+output = camelize('dO.""pE?r\'f:or@m~#\\\';}{|__tHIs`¬+)(*&)!"^)!^)!2 task8/?.,><#--plE&£$Ase---');
+// output === 'doPerformThisTaskPlease'
 ```

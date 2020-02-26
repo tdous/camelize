@@ -1,5 +1,5 @@
 export const camelize = str =>
-  str.split(/[\s|\-|_]/g).reduce((output, word, i) => {
+  str.split(/[\s|\-|_|\.]/g).reduce((output, word, i) => {
     // Strip non-alpha
     word = word.replace(/[^a-z]+/gi, '');
 
