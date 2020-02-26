@@ -23,3 +23,7 @@ test('ignores acronyms/initialisms', () => {
 test('sanity check', () => {
   expect(camelize('dO.""pE?r\'f:or@m~#\\\';}{|__tHIs`¬+)(*&)!"^)!^)!2 task8/?.,><#--plE&£$Ase---')).toBe('doPerformThisTaskPlease');
 });
+
+test('optional PascalCase', () => {
+  expect(camelize('do-perform_THIS task --please', { pascal: true })).toBe('DoPerformTHISTaskPlease');
+});
