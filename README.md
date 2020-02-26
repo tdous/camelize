@@ -40,7 +40,7 @@ output = camelize('dO.""pE?r\'f:or@m~#\\\';}{|__tHIs`¬+)(*&)!"^)!^)!2 task8/?.,
 // output === 'doPerformThisTaskPlease'
 ```
 
-#### Options
+### Options
 
 **PascalCase**
 ```javascript
