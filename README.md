@@ -4,10 +4,9 @@ String transformation to camelCase.
 - Allowed 'word' separators are *space*, *hyphen*, *dot*, and *underscore*.
 - Strips anything else that isn't a-z/A-Z.
 - Ignores acronyms/initialisms.
+- Defaults to dromedaryCase, optional PascalCase (see Usage options).
 
-This opinionated behaviour suits my needs. Might add options as time goes by.
-
-#### Getting it
+### Getting it
 
 ```sh
 npm install --save tdous/camelize
@@ -15,7 +14,7 @@ npm install --save tdous/camelize
 npm install --save-dev tdous/camelize
 ```
 
-#### Usage
+### Usage
 
 ```javascript
 import { camelize } from 'camelize';
@@ -39,4 +38,12 @@ output = camelize('dO.P29Perfor\m\-th&IS_TASK ple93;3ase!');
 
 output = camelize('dO.""pE?r\'f:or@m~#\\\';}{|__tHIs`¬+)(*&)!"^)!^)!2 task8/?.,><#--plE&£$Ase---');
 // output === 'doPerformThisTaskPlease'
+```
+
+#### Options
+
+**PascalCase**
+```javascript
+output = camelize('do-perform_THIS task --please', { pascal: true });
+// output === 'DoPerformTHISTaskPlease'
 ```
