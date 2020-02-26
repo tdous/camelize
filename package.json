@@ -1,0 +1,17 @@
+{
+  "name": "camelize",
+  "version": "1.0.0",
+  "description": "String transformation to camelCase",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0"
+  }
+}
