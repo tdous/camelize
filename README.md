@@ -38,6 +38,18 @@ output = camelize('dO.P29Perfor\m\-th&IS_TASK ple93;3ase!');
 
 output = camelize('dO.""pE?r\'f:or@m~#\\\';}{|__tHIs`¬+)(*&)!"^)!^)!2 task8/?.,><#--plE&£$Ase---');
 // output === 'doPerformThisTaskPlease'
+
+output = camelize(
+  'dO.""pE?r\'f:or@m~#\\\';}{|__tHIs`¬+)(*&)!"^)!^)!2 task8/?.,><#--plE&£$Ase---'
+  { pascal: true }
+);
+// output === 'DoPerformThisTaskPlease'
+
+output = camelize(
+  'DO.""PE?R\'F:OR@M~#\\\';}{|__THIS`¬+)(*&)!"^)!^)!2 TASK8/?.,><#--PLE&£$ASE---',
+  { divider: '_' }
+);
+// output === 'DO_PERFORM_THIS_TASK_PLEASE'
 ```
 
 ### Options

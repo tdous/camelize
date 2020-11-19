@@ -1,8 +1,9 @@
-const conf = {
-  pascal: false
-};
-
 export const camelize = (str, opts) => {
+  const conf = {
+    divider: null,
+    pascal: false,
+  };
+  
   if (opts && typeof opts === 'object') {
     Object.assign(conf, opts);
   }
@@ -19,6 +20,14 @@ export const camelize = (str, opts) => {
           : word.charAt(0).toLowerCase()) + word.substr(1).toLowerCase();
     }
 
-    return output + word;
+    if (!conf.divider) {
+      return output + word;
+    } else {
+      if (i > 0 && word) {
+        return output + conf.divider + word;
+      } else {
+        return output + word;
+      }
+    }
   }, '');
 };
